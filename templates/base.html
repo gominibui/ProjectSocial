@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="stylesheet" href="{% static 'styles_for_profile.css' %}">
     <link rel="stylesheet" href="{% static 'profile.css' %}">
+    <link rel="stylesheet" href="{% static 'post.css' %}">
+    <link rel="stylesheet" href="{% static 'all_posts.css' %}">
 </head>
 <body>
     <!-- Шапка сайта -->
@@ -16,7 +18,7 @@
             <h1 class="site-title"><a href="{% url 'main' %}">Project Social</a></h1>
             <nav class="nav">
                 <a href="{% url 'main' %}">Explore</a>
-                <a href="">Posts</a>
+                <a href="{% url 'all_posts' %}">Posts</a>
                 <a href="{% url 'users:profile' %}">Profile</a>
                 <a href="">Messages</a>
                 <a href="">Notifications</a>

@@ -9,7 +9,5 @@ def main(request):
     # Перенаправление на уникальную страницу пользователя
     return render(request,'base.html')
 
-@login_required()  # URL для регистрации
-def user_main(request, user_id):
-    user = get_object_or_404(User, id=user_id)  # Получаем пользователя или 404
-    return render(request, 'base.html', {'user': user})  # Передаем пользователя в шаблон
+def user_main(request):
+    return None

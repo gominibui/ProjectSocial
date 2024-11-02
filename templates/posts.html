@@ -1,0 +1,27 @@
+<!-- templates/all_posts.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}All Posts{% endblock %}
+
+{% block content %}
+<div class="posts-container">
+    <h1>All Posts Users</h1>
+    
+    <div class="create-post">
+        <a href="{% url 'create_post' %}" class="btn-create-post">Create New Post</a>
+    </div>
+    
+    <div class="posts-list">
+        {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content|truncatewords:20 }}</p>
+            <a href="" class="btn-read-more">Read More</a>
+        </div>
+        {% empty %}
+        <p>No posts available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

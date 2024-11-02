@@ -1,0 +1,60 @@
+/* static/css/posts.css */
+
+.create-post-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.create-post-container h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.back-to-posts {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-back {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-back:hover {
+    color: #0056b3;
+}

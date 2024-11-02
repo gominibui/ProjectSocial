@@ -1,0 +1,22 @@
+<!-- templates/create_post.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Create New Post{% endblock %}
+
+{% block content %}
+<div class="create-post-container">
+    <h1>Create New Post</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <button type="submit" class="btn-submit">Publish Post</button>
+    </form>
+    
+    <div class="back-to-posts">
+        <a href="{% url 'all_posts' %}" class="btn-back">Back to All Posts</a>
+    </div>
+</div>
+{% endblock %}
