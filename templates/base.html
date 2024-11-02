@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Project Social{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'styles_for_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title"><a href="{% url 'main' %}">Project Social</a></h1>
+            <nav class="nav">
+                <a href="{% url 'main' %}">Explore</a>
+                <a href="">Posts</a>
+                <a href="{% url 'users:profile' %}">Profile</a>
+                <a href="">Messages</a>
+                <a href="">Notifications</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <main class="content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; {{ current_year }} Project Social. All rights reserved.</p>
+            <a href="">Contact Us</a> | <a href="">About</a>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
