@@ -8,6 +8,3 @@ from django.contrib.auth.models import User
 def main(request):
     # Перенаправление на уникальную страницу пользователя
     return render(request,'base.html')
-
-def user_main(request):
-    return None

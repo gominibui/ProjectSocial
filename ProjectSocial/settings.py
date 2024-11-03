@@ -123,9 +123,13 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',  # Проверьте, чтобы путь соответствовал вашей структуре
 ]
 
+
+LOGIN_URL = 'login/'
+LOGIN_REDIRECT_URL = 'main/'  # или другой URL для перенаправления после входа
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
+
