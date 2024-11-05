@@ -8,7 +8,7 @@
 <div class="create-post-container">
     <h1>Create New Post</h1>
     
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         
@@ -16,7 +16,7 @@
     </form>
     
     <div class="back-to-posts">
-        <a href="{% url 'all_posts' %}" class="btn-back">Back to All Posts</a>
+        <a href="{% url 'posts:create_post' %}" class="btn-back">Back to All Posts</a>
     </div>
 </div>
 {% endblock %}

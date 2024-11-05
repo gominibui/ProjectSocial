@@ -1,3 +1,4 @@
+from django.contrib.auth.middleware import get_user
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, View
 
@@ -7,6 +8,7 @@ from django.template.context_processors import request
 
 from .forms import CreatePostForm
 from posts.models import Post
+from django.contrib.auth.models import User
 
 @method_decorator(login_required, name='dispatch')
 class CreatePostView(View):
@@ -18,6 +20,7 @@ class CreatePostView(View):
         form = CreatePostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
+            post.user = request.user
             post.save()
             return redirect('posts:all_posts')
         return render(request, 'create_post.html', {'form': form})

@@ -11,6 +11,6 @@ class CreatePostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'content', 'image']
         widgets = {
-            'title': forms.TextInput(attrs={'placeholder': 'Input your title'}),
-            'content': forms.Textarea(attrs={'placeholder': 'Input your content'}),
+            'title': forms.TextInput(attrs={'required': 'required'}, ),
+            'content': forms.Textarea(attrs={'required': 'required'}),
         }
