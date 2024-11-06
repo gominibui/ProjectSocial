@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'profile.css' %}">
     <link rel="stylesheet" href="{% static 'post.css' %}">
     <link rel="stylesheet" href="{% static 'all_posts.css' %}">
+    <link rel="stylesheet" href="{% static 'messegis.css' %}">
+    <link rel="stylesheet" href="{% static 'styles_for_chats.css' %}">
 </head>
 <body>
     <!-- Шапка сайта -->
@@ -20,7 +22,7 @@
                 <a href="{% url 'core:main' %}">Explore</a>
                 <a href="{% url 'posts:all_posts' %}">Posts</a>
                 <a href="{% url 'users:profile' %}">Profile</a>
-                <a href="">Messages</a>
+                <a href="{% url 'messaging:index' %}">Messages</a>
                 <a href="">Notifications</a>
             </nav>
         </div>
